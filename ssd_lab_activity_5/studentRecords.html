@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Students Records</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <script>
+        let studentData = [];
+        function insertRowInTable(name,roll){
+            let len = studentData.length;
+            let table = document.getElementById("myTable");
+            let row = table.insertRow(len);
+            let cell1 = row.insertCell(0);
+            let cell2 = row.insertCell(1);
+            cell1.innerHTML = roll;
+            cell2.innerHTML = name;
+        }
+        function addRow(){
+            let name = document.getElementById("stdName").value;
+            let roll = document.getElementById("rollNo").value;
+            if(roll==="" || name===""){
+                alert("Enter a valid name and roll!");
+                return;
+            }else{
+                studentData.push({name, roll});
+                console.log(studentData);
+                insertRowInTable(name,roll)
+            }
+            document.getElementById("rollNo").value = "";
+            document.getElementById("stdName").value = "";
+        }
+        function deleteRow(){
+            let len = studentData.length;
+            if(len == 0){
+                alert("No more student data available!");
+                return;
+            }
+            document.getElementById("myTable").deleteRow(len);
+            studentData.pop();
+        }
+
+    </script>
+    <body>
+        <div class = "container">
+            <h1 class="header"> Students Records </h1>
+            <p class = "inputRow">
+                <input type="number" class="ip"  id="rollNo" placeholder="Roll Number...">
+                <input type="text" class="ip"  id="stdName" placeholder="Student Name...">
+                <button class="btn" onClick="addRow()">Submit</button>
+            </p>
+            <table class="table" id="myTable">
+                <tr>
+                    <th>Roll No.</th>
+                    <th>Name</th>
+                </tr>
+            </table>
+            <div class="btnWrap"><button class="delBtn" onClick="deleteRow()">Delete Last Entry</button></div>
+        </div>
+    </body>
+</html>
