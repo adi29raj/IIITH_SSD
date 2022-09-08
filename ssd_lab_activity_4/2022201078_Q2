@@ -1,0 +1,11 @@
+DELIMITER $$
+CREATE PROCEDURE `LIVES_IN`(
+	IN `city` VARCHAR(25)
+)
+BEGIN
+	select * from customer where WORKING_AREA=city;
+END$$
+
+DELIMITER ;
+
+Call LIVES_IN("Bangalore");

@@ -1,0 +1,30 @@
+DELIMITER $$
+CREATE PROCEDURE `CURSOR_PROC8`(
+    INOUT dataList varchar(4000)
+)
+BEGIN
+    DECLARE finished INTEGER DEFAULT 0;
+    DECLARE result varchar(100) DEFAULT "";
+	DECLARE cur CURSOR FOR 
+    SELECT * from customer;
+    DECLARE CONTINUE HANDLER FOR 
+    NOT FOUND SET finished = 1;
+    OPEN cur;
+    getData: LOOP
+        FETCH cur INTO result;
+        IF finished = 1 THEN 
+			LEAVE getData;
+        END IF;
+        IF result.AGENT_CODE LIKE 'A00%' THEN
+            SET dataList = CONCAT(result.CUST_NAME,";",dataList);
+        END IF;
+    END LOOP getData;
+    CLOSE cur;
+END$$
+
+DELIMITER ;
+
+SET @dataList = ""; 
+CALL CURSOR_PROC8(@dataList); 
+SELECT @dataList;
+
