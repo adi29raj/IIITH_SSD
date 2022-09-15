@@ -1,0 +1,1 @@
+Use Ctrl+Z for theme change.

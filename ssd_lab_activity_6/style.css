@@ -1,0 +1,74 @@
+.container{
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    margin-top:100px;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form{
+    min-width: 500px;
+    max-width: 720px;
+    padding: 14px 16px;
+    margin: auto;
+    margin-top: 32px;
+    flex-flow: row;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    border-radius: 8px;
+}
+.wrap{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding:8px;
+}
+
+.ip{
+    padding: 8px 12px;
+    margin: 6px 8px;
+    border: 1px solid #cccccc;
+    border-radius: 8px;
+    max-width: 300px;
+}
+
+.left{
+    border : 1px solid #ccc;
+    min-width: 260px;
+    min-height: 200px ;
+    border-radius: 4px;
+}
+
+.right {
+    border : 1px solid #ccc;
+    min-width: 260px;
+    min-height: 200px ;
+    border-radius: 4px;
+
+}
+
+.delBtn{
+    padding: 8px 12px;
+    margin: 6px 8px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    background-color: #e25e4a;
+    color: white;
+    max-width: 320px;
+    margin-top: 32px;
+}
+.btnWrap{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.error{
+    color: red;
+}
