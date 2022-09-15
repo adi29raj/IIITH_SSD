@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Lab 6</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+   <body>
+        <div class="container" id="container">
+            <h1 class="header">Team Form</h1>
+            <form class="form">
+                <div class="wrap">
+                    <label name="mname" class="label"><b>Manager Name</b></label>
+                    <input type="text" class="ip"  id="mname" placeholder="Enter Manager Name" required>
+                </div>
+                <div class="wrap">
+                    <label name="email" class="label"><b>Group Email</b></label>
+                    <input type="email" class="ip"  id="email" placeholder="Enter Email" required>
+                </div>
+                <div class="wrap">
+                    <label name="sunamee" class="label"><b>Server Username</b></label>
+                    <div>
+                        <input type="text" class="ip" name="suname"  id="suname" placeholder="Enter Server Username" required>
+                        <div class="error" id ="error"></div>
+                    </div>
+                </div>
+                <div class="wrap">
+                    <label name="pswd" class="label"><b>Server Password</b></label>
+                    <input type="password" class="ip"  id="pswd" placeholder="Enter Password" required>
+                </div>
+                <div class="wrap">
+                    <label name="cpswd" class="label"><b>Confirm Password</b></label>
+                    <input type="password" class="ip"  id="cpswd" placeholder="Enter Password" onBlur="testCnfmPswd()" required>
+                </div>
+                <div class="wrap">
+                    <label name="tlead" class="label"><b>Team Lead</b></label>
+                    <select name="tlead" id="tlead" class="ip" required>
+                        <option value="Thor" class="ip">Thor</option>
+                        <option value="Iron man" class="ip">Iron man</option>
+                        <option value="Captain America" class="ip">Captain America</option>
+                        <option value="Black Widow" class="ip">Black Widow</option>
+                        <option value="Scarlet Witch" class="ip">Scarlet Witch</option>
+                        <option value="Humangasour" class="ip">Humangasour</option>
+                    </select>
+                </div>
+                <div class="wrap">
+                    <label name="tmem" class="label"><b>Team Members</b></label>
+                    <div class = "left">
+                        <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">Thor</div>
+                        <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">Iron man</div>
+                        <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">Captain America</div>
+                        <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">Black Widow</div>
+                        <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">Scarlet Witch</div>
+                        <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">Humangasour</div>
+                    </div>
+                    <div class = "right" draggable="true" ondragstart="drag(event)">
+
+                    </div>
+                </div>
+                <div class="btnWrap"><button type="submit" class="delBtn" onClick="onSubmit()">Submit</button></div>
+            </form>
+        </div>
+   </body>
+   <script type ="text/javascript" src="script.js"></script>
+</html>
