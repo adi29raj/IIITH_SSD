@@ -1,0 +1,115 @@
+body{
+  /* background-color: #85FFBD; */
+  /* background-image: linear-gradient(45deg, #85FFBD 0%, #FFFB7D 100%); */
+}
+.container{
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  margin-top:100px;
+  font-family: Arial, Helvetica, sans-serif;
+
+}
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.inputRow{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 32px;
+}
+.inputRowIndex{
+  max-width: 360px;
+  padding: 12px 16px;
+  margin: auto;
+  margin-top: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: column;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  border-radius: 8px;
+}
+
+
+.ip{
+  width: 100%;
+  padding: 8px 12px;
+  margin: 6px 8px;
+  border: 1px solid #cccccc;
+  border-radius: 8px;
+  max-width: 300px;
+}
+.ip:hover {
+  border-color: red;
+}
+
+.label {
+  margin-top: 32px;
+}
+
+.btn {
+  padding: 8px 12px;
+  margin: 6px 8px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  width: 100%;
+  background-color: #4CAF50;
+  color: white;
+  max-width: 150px;
+}
+.table {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  margin-top: 32px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px, rgb(51, 51, 51) 0px 0px 0px 3px;
+  width: fit-content;
+}
+th, td {
+  text-align: left;
+  padding: 16px;
+  /* border: 1px solid black; */
+  min-width: 260px;
+}
+
+tr:nth-child(even) {
+  background-color: #777373;
+}
+tr:nth-child(odd) {
+  background-color: #f2f2f2;
+}
+th {
+  background-color: #4064cf;
+}
+.delBtn{
+  padding: 8px 12px;
+  margin: 6px 8px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%;
+  background-color: #e25e4a;
+  color: white;
+  max-width: 320px;
+  margin-top: 32px;
+}
+.btnWrap{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.wrap{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.box{
+  margin: 32px;
+  padding:16px;
+}
